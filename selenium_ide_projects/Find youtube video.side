@@ -1,0 +1,139 @@
+{
+  "id": "63b505a6-ddb0-4371-8b95-51f1126fb20e",
+  "version": "2.0",
+  "name": "Find youtube video",
+  "url": "https://www.youtube.com/",
+  "tests": [{
+    "id": "64ebd8c6-b888-4991-8acf-e8fa9dabbec5",
+    "name": "find video",
+    "commands": [{
+      "id": "a354f4ed-6b50-454b-b5f4-e82f0bc02e78",
+      "comment": "",
+      "command": "open",
+      "target": "id=content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d1dcdb2-1dce-464f-a3ea-22b1922c957a",
+      "comment": "",
+      "command": "click",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#sb_ifc50 > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='sb_ifc50']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "69a14c22-36d9-48b5-9d59-f518124b9de1",
+      "comment": "",
+      "command": "type",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#sb_ifc50 > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='sb_ifc50']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "rick astley - gonna give you up"
+    }, {
+      "id": "6c4d9588-4ede-430e-ba0a-356a9dc3494f",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#sb_ifc50 > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='sb_ifc50']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "180743f7-6abd-4c31-b936-e2c9dcd0db44",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.ytd-item-section-renderer:nth-child(1) > #dismissible #thumbnail #img",
+      "targets": [
+        ["css=.ytd-item-section-renderer:nth-child(1) > #dismissible #thumbnail #img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i.ytimg.com/vi/doEqUhFiQS4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA4f9jls-MsehpOM9DlH4n3QhAQpQ')]", "xpath:img"],
+        ["xpath=(//img[@id='img'])[53]", "xpath:attributes"],
+        ["xpath=(//a[@id='thumbnail']/yt-img-shadow/img)[26]", "xpath:idRelative"],
+        ["xpath=//ytd-video-renderer/div/ytd-thumbnail/a/yt-img-shadow/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc83004b-497d-49b7-9e40-423172d842db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ytd-item-section-renderer:nth-child(1) > #dismissible #thumbnail #img",
+      "targets": [
+        ["css=.ytd-item-section-renderer:nth-child(1) > #dismissible #thumbnail #img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i.ytimg.com/vi/doEqUhFiQS4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA4f9jls-MsehpOM9DlH4n3QhAQpQ')]", "xpath:img"],
+        ["xpath=(//img[@id='img'])[53]", "xpath:attributes"],
+        ["xpath=(//a[@id='thumbnail']/yt-img-shadow/img)[26]", "xpath:idRelative"],
+        ["xpath=//ytd-video-renderer/div/ytd-thumbnail/a/yt-img-shadow/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a636b24c-41d8-4138-9789-7bc8fe3e4e2b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.video-stream",
+      "targets": [
+        ["css=.video-stream", "css:finder"],
+        ["xpath=//div[@id='movie_player']/div/video", "xpath:idRelative"],
+        ["xpath=//video", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2949213b-91f2-426d-9333-a779877a7ece",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.title > .ytd-video-primary-info-renderer",
+      "targets": [
+        ["css=.title > .ytd-video-primary-info-renderer", "css:finder"],
+        ["xpath=//div[@id='container']/h1/yt-formatted-string", "xpath:idRelative"],
+        ["xpath=//h1/yt-formatted-string", "xpath:position"],
+        ["xpath=//yt-formatted-string[contains(.,'Rick Astley - Gonna Give You Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "85bc3219-3494-4f2f-ba5d-9a074f2f22a8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.title > .ytd-video-primary-info-renderer",
+      "targets": [
+        ["css=.title > .ytd-video-primary-info-renderer", "css:finder"],
+        ["xpath=//div[@id='container']/h1/yt-formatted-string", "xpath:idRelative"],
+        ["xpath=//h1/yt-formatted-string", "xpath:position"],
+        ["xpath=//yt-formatted-string[contains(.,'Rick Astley - Gonna Give You Up')]", "xpath:innerText"]
+      ],
+      "value": "Rick Astley - Gonna Give You Up"
+    }, {
+      "id": "0438cba5-5726-4339-9dfe-835bce5fc701",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.ytp-play-button",
+      "targets": [
+        ["css=.ytp-play-button", "css:finder"],
+        ["xpath=//div[@id='movie_player']/div[32]/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "bba46189-c49d-4f9b-b7e6-9e3e02188386",
+    "name": "Youtube video",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["64ebd8c6-b888-4991-8acf-e8fa9dabbec5"]
+  }],
+  "urls": ["https://www.youtube.com/"],
+  "plugins": []
+}
